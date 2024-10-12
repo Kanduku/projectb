@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BINOMO Contest - Win Surprising Prizes</title> 
+  <link rel="icon" href="https://ll-aimages.veoh.com/thumb/w277/user-binomologin4.png" type="image/png">
+ <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Hero Section */
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+      background: linear-gradient(45deg, #000, #222);
+    }
+    .falling-text {
+      font-size: 5rem;
+      font-weight: bold;
+      color: gold;
+      text-align: center;
+      animation: fall 3s ease-in-out forwards;
+    }
+    .mario-avatar {
+      position: absolute;
+      bottom: 0;
+      background-image: url('https://dummyimage.com/200x200/000/fff&text=Super+Mario');
+      background-size: contain;
+      width: 200px;
+      height: 200px;
+      animation: fall 3s ease-in-out forwards;
+    }
+    .sub-text {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-200px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    /* Contest Section */
+    .contest-section {
+      padding: 50px 20px;
+      text-align: center;
+      background: #111;
+      margin-bottom: 30px;
+    }
+    .contest-section h1 {
+      margin-bottom: 30px;
+      color: gold;
+    }
+    .prizes {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    .prize {
+      text-align: center;
+    }
+    .prize img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid gold;
+      transition: transform 0.3s ease;
+    }
+    .prize:hover img {
+      transform: scale(1.1);
+    }
+    .prize p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+    /* Share Section */
+    .share-section {
+      padding: 50px 20px;
+      text-align: center;
+      background: #222;
+    }
+    .share-section p {
+      font-size: 1.2rem;
+    }
+    input[type="text"] {
+      width: 100%;
+      max-width: 70%;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      border: 1px solid #444;
+      background: #333;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: gold;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #ffcc00;
+    }
+    .share-range {
+      margin-top: 20px;
+    }
+    .share-range label {
+      font-size: 1.1rem;
+    }
+    input[type="range"] {
+      width: 100%;
+      max-width: 70%;
+      margin-top: 10px;
+    }
+    #share-count {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    /* Participate Button */
+    .participate-btn {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      background-color: limegreen;
+      padding: 15px 25px;
+    }
+    .participate-btn:hover {
+      background-color: #00cc00;
+    }
+    /* Note Section */
+    .note-section {
+      padding: 50px 20px;
+      background: #111;
+      color: yellow;
+      text-align: center;
+    }
+    .note-section h2 {
+      margin-bottom: 20px;
+    }
+    .note-list {
+      list-style-type: none;
+    }
+    .note-list li {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
+      .prizes {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hero-section .falling-text {
+        font-size: 3rem;
+      }
+      input[type="text"], input[type="range"] {
+        width: 90%;
+      }
+      button {
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 15px 0;
+      }
+      .share-range {
+        margin-top: 10px;
+      }
+      .sub-text {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+    }
+
+
+
+    /* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Prevent overflow */
+  text-align: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?nature,water'); /* A beautiful background image */
+  background-size: cover;
+  filter: blur(8px); /* Add blur effect */
+  z-index: -1; /* Place behind text */
+  opacity: 0.5; /* Make it slightly transparent */
+}
+
+.falling-text {
+  font-size: 6rem; /* Increased size */
+  font-weight: bold;
+  color: gold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+  animation: fall 3s ease-in-out forwards;
+}
+
+.mario-avatar {
+  position: absolute;
+  bottom: 20%; /* Position it nicely above the bottom */
+  background-image: url('https://dummyimage.com/200x200/000/fff&text=Super+Mario');
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  animation: bounce 2s infinite; /* Added bounce animation */
+}
+
+.sub-text {
+  margin-top: 20px;
+  font-size: 1.8rem; /* Increased font size */
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Added shadow for visibility */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.join-now-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.5rem; /* Increased font size */
+  background-color: limegreen;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-now-btn:hover {
+  background-color: #00cc00; /* Hover effect */
+}
+
+/* Keyframes for animations */
+@keyframes fall {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .falling-text {
+    font-size: 4rem; /* Decrease font size */
+  }
+  .mario-avatar {
+    width: 150px; /* Decrease size for mobile */
+    height: 150px;
+  }
+  .sub-text {
+    font-size: 1.2rem; /* Decrease font size */
+  }
+}
+
+
+/* Contest Section */
+.contest-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); /* Dark gradient background */
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 1200px; /* Center the section */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.contest-section h1 {
+  margin-bottom: 30px;
+  color: gold;
+  font-size: 3rem; /* Increased font size */
+  text-transform: uppercase; /* Make the title more impactful */
+  letter-spacing: 1px; /* Add spacing for elegance */
+}
+
+.prizes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 40px; /* Space between prizes */
+}
+
+.prize {
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.prize:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.prize img {
+  width: 250px; /* Set a fixed width */
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid gold; /* Gold border for emphasis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.prize-title {
+  margin-top: 10px;
+  font-size: 1.5rem; /* Increased font size */
+  color: white; /* Make title color white */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for visibility */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .prizes {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    gap: 20px; /* Reduced gap */
+  }
+
+  .prize img {
+    width: 200px; /* Decrease image size for mobile */
+  }
+
+  .contest-section h1 {
+    font-size: 2rem; /* Decrease font size for mobile */
+  }
+
+  .prize-title {
+    font-size: 1.2rem; /* Decrease title size for mobile */
+  }
+}
+
+/* Share Section */
+.share-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b0c14, #1c1e24); /* Darker gradient for contrast */
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 800px; /* Center the section */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.share-section h2 {
+  color: gold;
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Increased font size */
+  text-transform: uppercase; /* Uppercase title */
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px; /* Margin for spacing */
+}
+
+#shareLink {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  font-size: 1rem; /* Increased font size */
+  transition: transform 0.2s ease; /* Add transition for hover effect */
+}
+
+#shareLink:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+}
+
+#copyBtn {
+  padding: 10px 20px;
+  background-color: limegreen;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1rem; /* Increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for hover effect */
+}
+
+#copyBtn:hover {
+  background-color: #00cc00; /* Hover effect */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.share-range {
+  margin-top: 20px; /* Margin for spacing */
+}
+
+.share-range label {
+  font-size: 1rem; /* Font size */
+  color: white; /* Label color */
+}
+
+#shares {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#share-count {
+  font-size: 1rem; /* Font size */
+  color: white; /* Count color */
+}
+
+/* Keyframes for animations */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px gold;
+  }
+  50% {
+    box-shadow: 0 0 20px gold;
+  }
+  100% {
+    box-shadow: 0 0 5px gold;
+  }
+}
+
+/* Apply animation on focus */
+#shareLink:focus {
+  animation: glow 1.5s infinite; /* Glow effect */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .input-group {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Full width */
+  }
+
+  #shareLink {
+    width: 100%; /* Full width on mobile */
+  }
+
+  #copyBtn {
+    width: 100%; /* Full width on mobile */
+    margin-top: 10px; /* Add margin for spacing */
+  }
+
+  .share-section h2 {
+    font-size: 2rem; /* Decrease font size for mobile */
+  }
+}
+/* Note Section */
+.note-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  margin: 30px auto;
+  max-width: 800px; /* Center the section */
+}
+
+.note-section h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem; /* Increased font size */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for visibility */
+}
+
+.note-list {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin-bottom: 20px; /* Margin for spacing */
+}
+
+.note-list li {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0; /* Margin between items */
+  font-size: 1.2rem; /* Increased font size */
+  color: #333; /* Dark text for contrast */
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.note-list li:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Participate Button */
+.participate-btn {
+  padding: 15px 30px;
+  font-size: 1.5rem; /* Increased font size */
+  background-color: #28a745; /* Green background */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for hover effect */
+}
+
+.participate-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .note-section {
+    padding: 30px 10px; /* Adjust padding for mobile */
+  }
+
+  .note-section h2 {
+    font-size: 1.8rem; /* Decrease font size for mobile */
+  }
+
+  .note-list li {
+    font-size: 1rem; /* Decrease font size for mobile */
+  }
+
+  .participate-btn {
+    font-size: 1.2rem; /* Decrease button font size for mobile */
+    padding: 10px 20px; /* Adjust padding for mobile */
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Section 1: BINOMO and Mario 3D animation -->
+<!-- Section 1: BINOMO and Mario 3D animation -->
+<section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="falling-text" id="falling-text">BINOMO</div>
+    
+    <p class="sub-text">Participate and win surprising gifts! For each share, you get a chance to win ₹1000 in your Binomo wallet. last date of the participation is october 29</p>
+   
+  </section>
+  
+
+    <!-- Section 2: Contest Title and Prizes -->
+<section class="contest-section">
+    <h1>Win Surprising Prizes!</h1>
+    <div class="prizes">
+      <div class="prize">
+        <img src="https://th.bing.com/th/id/OIP.Gyhnp1jIpOfwqPWPlzauFQHaE5?w=267&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="iPhone 16 Pro Max" />
+        <p class="prize-title">iPhone 16 Pro Max</p>
+      </div>
+      <div class="prize">
+        <img src="https://th.bing.com/th/id/OIP.kJzfGuC53nkCacdzsrjYVwHaEK?w=305&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="BMW" />
+        <p class="prize-title">BMW</p>
+      </div>
+      <div class="prize">
+        <img src="https://cdn.mos.cms.futurecdn.net/fadf68e0b0f4e39890deabdbccdf3e2d.jpg" alt="MacBook Pro" />
+        <p class="prize-title">MacBook Pro</p>
+      </div>
+      <div class="prize">
+        <img src="https://th.bing.com/th/id/OIP.GcjRoY4w9Eytt2scCWGlswAAAA?rs=1&pid=ImgDetMain" alt="Smartwatch" />
+        <p class="prize-title">Smartwatch</p>
+      </div>
+    </div>
+  </section>
+  
+
+   <!-- Section 3: Share Link -->
+<section class="share-section">
+    <h2>Share Your Link!</h2>
+    <p>Share this link with 5 members to participate:</p>
+    <div class="input-group">
+      <input type="text" id="shareLink" value="https://binomo-redirect.com/auth?invite_code=89a7102d718a291bb70e18c742ebff80#SignUp" readonly />
+      <button id="copyBtn">Copy Link & Share</button>
+    </div>
+    <div class="share-range">
+      <label for="shares">Range of shares:</label>
+      <input type="range" id="shares" name="shares" min="0" max="5" value="0" readonly />
+      <span id="share-count">0/5 Shares</span>
+    </div>
+  </section>
+  
+<!-- Section 4: Note Section -->
+<section class="note-section">
+    <h2>Important Notes:</h2>
+    <ul class="note-list">
+      <li>For each share, you will receive ₹1000 in your Binomo account within 24 to 48 hours.</li>
+      <li>Make sure you share the above link with 5 different members.</li>
+      <li>Your 5 friends must open the link and complete their first trade.</li>
+    </ul>
+    <!-- Participate Button -->
+    <button class="participate-btn" id="participateBtn">Click to Participate</button>
+  </section>
+  
+
+  <script>
+    // Copy Link and Increase Share Count
+    document.getElementById('copyBtn').addEventListener('click', function () {
+      const shareLink = document.getElementById('shareLink');
+      const shareRange = document.getElementById('shares');
+      const shareCount = document.getElementById('share-count');
+
+      // Check if navigator.share() is supported
+      if (navigator.share) {
+        navigator.share({
+          title: 'BINOMO Contest',
+          text: 'Win surprising prizes with BINOMO!',
+          url: shareLink.value
+        })
+        .then(() => {
+          // Increase the share count by 1
+          if (parseInt(shareRange.value) < 5) {
+            shareRange.value = parseInt(shareRange.value) + 1;
+            shareCount.textContent = `${shareRange.value}/5 Shares`;
+          }
+        })
+        .catch((error) => console.log('Error sharing', error));
+      } else {
+        // Fallback: Copy the link to clipboard
+        shareLink.select();
+        shareLink.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand('copy');
+        alert('Link copied to clipboard!');
+
+        // Increase the share count by 1
+        if (parseInt(shareRange.value) < 5) {
+          shareRange.value = parseInt(shareRange.value) + 1;
+          shareCount.textContent = `${shareRange.value}/5 Shares`;
+        }
+      }
+    });
+
+    // Participate Button Click Event
+    document.getElementById('participateBtn').addEventListener('click', function () {
+      window.location.href = "https://binomo-redirect.com/auth?invite_code=89a7102d718a291bb70e18c742ebff80#SignUp";
+      alert('Click the participate button to download the app and receive your rewards in the Binomo wallet!');
+    });
+  </script>
+</body>
+</html>
